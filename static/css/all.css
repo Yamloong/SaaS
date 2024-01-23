@@ -2,11 +2,11 @@
 
 /* [중요] 아래 import 선언 순서를 반드시 유지해야 합니다. */
 /* import를 추가하려면 _mo.css 아래에 추가해주세요. */
-@import	"https://yamloong.github.io/SaaS/static/css/_reset.css";
-@import "https://yamloong.github.io/SaaS/static/css/_config.css";
+@import	"_reset.css";
+@import "_config.css";
 
-@import "https://yamloong.github.io/SaaS/static/font/_fonts.css";
-@import "https://yamloong.github.io/SaaS/static/font/icomoon/style.css";
+@import "_fonts.css";
+@import "../font/icomoon/style.css";
 
-@import "https://yamloong.github.io/SaaS/static/css/_pc.css";
-@import "https://yamloong.github.io/SaaS/static/css/_mo.css";
+@import "_pc.css";
+@import "_mo.css";

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>SaaS아동급식 사용자 퍼블작업리스트</title>
+
+<link href="static/css/all.css" rel="stylesheet" />
+<script src="static/js/jquery.min.js"></script>
+
+<!-- 파일구조도 스타일 -->
+<style>
+.guide_page header { width: 100%; background-color: #333; }
+.guide_page header .inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px 20px 20px 0; color: #fff; font-size: 20px; }
+.guide_page header .logo { width: 100%; font-size: 20px; line-height: 42px; }
+.guide_page .container { display: block; max-width: 1200px; padding: 40px 0; margin: 0 auto; }
+.guide_page .page-title { font-size: 25px; font-weight: 600; }
+.guide_page .page-note { margin: 25px 0 35px; padding: 25px; background-color: #f8f8f8; border-left: 5px solid #666; border-radius: 5px; }
+/* 안내 */
+.guide ul.info { margin: 0 10px 30px 10px; }
+.guide ul.info li { display: flex; position: relative; padding-left: 8px; line-height: 32px; }
+.guide ul.info li::before { content: '✔'; margin-right: 3px; }
+
+.guide-table-wrap { border-top: 1px solid #000; margin-bottom: 50px; }
+.guide-table-wrap table { width: 100%; border-left: 1px solid #ddd; }
+.guide-table-wrap table th { text-align: center; font-weight: 600; }
+.guide-table-wrap table td { padding: 0 12px; }
+.guide-table-wrap table td.td-title { text-align: center; font-size: 13px; font-weight: 600; background-color: #eee; }
+.guide-table-wrap table td.last_modified { text-align: center; }
+.guide-table-wrap table th,
+.guide-table-wrap table td { height: var(--table-row-height); border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.guide-table-wrap table td[class^="bg-"] { color: #fff; }
+.guide-table-wrap table td a:hover { color: var(--primary); }
+</style>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">SaaS아동급식 사용자 퍼블작업리스트</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<article class="guide">
+			<h3 class="guide-title">페이지 분류</h3>
+
+			<ul class="info">
+				<!-- <li>경로 : ./pages/</li> -->
+				<li>
+					분류 :
+					<div class="badge-list">
+						<span class="badge-primary">MODAL</span> (Layer Popup) 
+						<span class="badge-info">WINDOW</span> (window Popup) 
+					</div>
+				</li>
+			</ul>
+
+			<div class="guide-table-wrap">
+				<table>
+					<colgroup>
+						<col width="150px" />
+						<col width="150px" />
+						<col width="150px" />
+						<col width="200px" />
+						<col width="110px" />
+						<col width="*" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Depth-1</th>
+							<th>Depth-2</th>
+							<th>Depth-3</th>
+							<th>파일</th>
+							<th>최종작업일</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="100" class="td-title">메인 (pages/0.메인)</td>
+						</tr>
+						<tr>
+							<td>메인</td>
+							<td>메인</td>
+							<td></td>
+							<td><a href="pages/0.메인/메인.html" target="_sub">메인.html</a></td>
+							<td class="last_modified">2023-11-23</td>
+							<td></td>
+						</tr>
+
+						<!-- 바우처안내 -->
+						<tr>
+							<td colspan="100" class="td-title">바우처안내 (pages/1.바우처안내)</td>
+						</tr>
+						<tr>
+							<td rowspan="4">이용안내</td>
+							<td>이용안내</td>
+							<td></td>
+							<td><a href="pages/1.바우처안내/이용안내.html" target="_sub">이용안내.html</a></td>
+							<td class="last_modified">2024-01-03</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>배달앱</td>
+							<td></td>
+							<td><a href="pages/1.바우처안내/배달앱.html" target="_sub">배달앱.html</a></td>
+							<td class="last_modified">2024-01-16</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>편의점</td>
+							<td></td>
+							<td><a href="pages/1.바우처안내/편의점.html" target="_sub">편의점.html</a></td>
+							<td class="last_modified"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>모바일 결제 안내</td>
+							<td></td>
+							<td><a href="pages/1.바우처안내/모바일결제안내.html" target="_sub">모바일결제안내.html</a></td>
+							<td class="last_modified"></td>
+							<td></td>
+						</tr>
+
+						<!-- 가맹점 -->
+						<tr>
+							<td colspan="100" class="td-title">가맹점 (pages/2.가맹점)</td>
+						</tr>
+						<tr>
+							<td>가맹점</td>
+							<td>가맹점조회</td>
+							<td></td>
+							<td><a href="pages/2.가맹점/가맹점조회.html" target="_sub">가맹점조회.html</a></td>
+							<td class="last_modified">2023-12-05</td>
+							<td></td>
+						</tr>
+
+						<!-- 참여마당 -->
+						<tr>
+							<td colspan="100" class="td-title">참여마당 (pages/3.참여마당)</td>
+						</tr>
+						<tr>
+							<td rowspan="6">참여마당</td>
+							<td>공지사항</td>
+							<td>목록</td>
+							<td><a href="pages/3.참여마당/공지사항.html" target="_sub">공지사항.html</a></td>
+							<td class="last_modified">2023-12-13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>상세</td>
+							<td><a href="pages/3.참여마당/공지사항상세.html" target="_sub">공지사항상세.html</a></td>
+							<td class="last_modified">2023-12-13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>부정사용 사례</td>
+							<td></td>
+							<td><a href="pages/3.참여마당/부정사용사례.html" target="_sub">부정사용사례.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>자유게시판</td>
+							<td>목록</td>
+							<td><a href="pages/3.참여마당/자유게시판.html" target="_sub">자유게시판.html</a></td>
+							<td class="last_modified">2023-12-13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>상세</td>
+							<td><a href="pages/3.참여마당/자유게시판상세.html" target="_sub">자유게시판상세.html</a></td>
+							<td class="last_modified">2023-12-13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>쓰기</td>
+							<td><a href="pages/3.참여마당/자유게시판쓰기.html" target="_sub">자유게시판쓰기.html</a></td>
+							<td class="last_modified">2023-12-13</td>
+							<td></td>
+						</tr>
+
+						<!-- 사용안내 -->
+						<tr>
+							<td colspan="100" class="td-title">사용안내 (pages/4.사용안내)</td>
+						</tr>
+						<tr>
+							<td rowspan="12">사용안내</td>
+							<td>카드분실신고</td>
+							<td>작성</td>
+							<td><a href="pages/4.사용안내/카드분실신고.html" target="_sub">카드분실신고.html</a></td>
+							<td class="last_modified">2023-12-14</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>확인</td>
+							<td><a href="pages/4.사용안내/카드분실신고확인.html" target="_sub">카드분실신고확인.html</a></td>
+							<td class="last_modified">2023-12-14</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>고객지원센터</td>
+							<td></td>
+							<td><a href="pages/4.사용안내/고객지원센터.html" target="_sub">고객지원센터.html</a></td>
+							<td class="last_modified">2024-01-02</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>자주하는질문</td>
+							<td></td>
+							<td><a href="pages/4.사용안내/자주하는질문.html" target="_sub">자주하는질문.html</a></td>
+							<td class="last_modified">2023-12-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>일대일문의</td>
+							<td>목록</td>
+							<td><a href="pages/4.사용안내/일대일문의.html" target="_sub">일대일문의.html</a></td>
+							<td class="last_modified">2023-12-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>상세</td>
+							<td><a href="pages/4.사용안내/일대일문의상세.html" target="_sub">일대일문의상세.html</a></td>
+							<td class="last_modified">2023-12-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>쓰기</td>
+							<td><a href="pages/4.사용안내/일대일문의쓰기.html" target="_sub">일대일문의쓰기.html</a></td>
+							<td class="last_modified">2023-12-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>부정사용신고</td>
+							<td></td>
+							<td><a href="pages/4.사용안내/부정사용신고.html" target="_sub">부정사용신고.html</a></td>
+							<td class="last_modified">2023-12-15</td>
+							<td><span class="badge-primary">MODAL</span> 도움말</td>
+						</tr>
+						<tr>
+							<td>부정사용신고결과조회</td>
+							<td>비회원</td>
+							<td><a href="pages/4.사용안내/부정사용신고결과비회원.html" target="_sub">부정사용신고결과비회원.html</a></td>
+							<td class="last_modified">2023-12-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>목록</td>
+							<td><a href="pages/4.사용안내/부정사용신고결과조회.html" target="_sub">부정사용신고결과조회.html</a></td>
+							<td class="last_modified">2023-12-14</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>상세</td>
+							<td><a href="pages/4.사용안내/부정사용신고결과조회상세.html" target="_sub">부정사용신고결과조회상세.html</a></td>
+							<td class="last_modified">2023-12-14</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>쓰기</td>
+							<td><a href="pages/4.사용안내/부정사용신고결과조회쓰기.html" target="_sub">부정사용신고결과조회쓰기.html</a></td>
+							<td class="last_modified">2023-12-14</td>
+							<td></td>
+						</tr>
+
+						<!-- 마이페이지 -->
+						<tr>
+							<td colspan="100" class="td-title">마이페이지 (pages/5.마이페이지)</td>
+						</tr>
+						<tr>
+							<td rowspan="7">마이페이지</td>
+							<td>마이페이지</td>
+							<td></td>
+							<td><a href="pages/5.마이페이지/마이페이지.html" target="_sub">마이페이지.html</a></td>
+							<td class="last_modified">2023-12-06</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>지난급식표</td>
+							<td><a href="pages/5.마이페이지/지난급식표.html" target="_sub">지난급식표.html</a></td>
+							<td class="last_modified">2023-12-08</td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+						<tr>
+							<td>나의이용내역</td>
+							<td></td>
+							<td><a href="pages/5.마이페이지/나의이용내역.html" target="_sub">나의이용내역.html</a></td>
+							<td class="last_modified">2023-12-07</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>이용내역상세</td>
+							<td><a href="pages/5.마이페이지/이용내역상세.html" target="_sub">이용내역상세.html</a></td>
+							<td class="last_modified">2023-12-08</td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+						<tr>
+							<td>회원정보조회</td>
+							<td></td>
+							<td><a href="pages/5.마이페이지/회원정보조회.html" target="_sub">회원정보조회.html</a></td>
+							<td class="last_modified">2023-12-08</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>비밀번호변경</td>
+							<td><a href="pages/5.마이페이지/비밀번호변경.html" target="_sub">비밀번호변경.html</a></td>
+							<td class="last_modified">2023-12-11</td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>회원탈퇴</td>
+							<td><a href="pages/5.마이페이지/회원탈퇴.html" target="_sub">회원탈퇴.html</a></td>
+							<td class="last_modified">2023-12-08</td>
+							<td></td>
+						</tr>
+
+						<!-- 기타 -->
+						<tr>
+							<td colspan="100" class="td-title">기타 (pages/6.기타)</td>
+						</tr>
+						<tr>
+							<td rowspan="4">기타</td>
+							<td>이용약관</td>
+							<td></td>
+							<td><a href="pages/6.기타/이용약관.html" target="_sub">이용약관.html</a></td>
+							<td class="last_modified"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>개인정보처리방침</td>
+							<td></td>
+							<td><a href="pages/6.기타/개인정보처리방침.html" target="_sub">개인정보처리방침.html</a></td>
+							<td class="last_modified">2023-11-29</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>404에러</td>
+							<td></td>
+							<td><a href="pages/6.기타/404에러.html" target="_sub">404에러.html</a></td>
+							<td class="last_modified">2023-01-22</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>500에러</td>
+							<td></td>
+							<td><a href="pages/6.기타/500에러.html" target="_sub">500에러.html</a></td>
+							<td class="last_modified">2023-01-22</td>
+							<td></td>
+						</tr>
+
+						<!-- 회원가입 -->
+						<tr>
+							<td colspan="100" class="td-title">회원가입 (pages/7.회원가입)</td>
+						</tr>
+						<tr>
+							<td rowspan="5">회원가입</td>
+							<td>회원가입</td>
+							<td></td>
+							<td><a href="pages/7.회원가입/회원가입.html" target="_sub">회원가입.html</a></td>
+							<td class="last_modified">2023-12-26</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>대상자확인결과</td>
+							<td><a href="pages/7.회원가입/대상자확인결과.html" target="_sub">대상자확인결과.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>가입유형</td>
+							<td></td>
+							<td><a href="pages/7.회원가입/가입유형.html" target="_sub">가입유형.html</a></td>
+							<td class="last_modified">2023-12-26</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>정보입력</td>
+							<td></td>
+							<td><a href="pages/7.회원가입/정보입력.html" target="_sub">정보입력.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>가입완료</td>
+							<td></td>
+							<td><a href="pages/7.회원가입/가입완료.html" target="_sub">가입완료.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+
+						<!-- 로그인 -->
+						<tr>
+							<td colspan="100" class="td-title">로그인 (pages/8.로그인)</td>
+						</tr>
+						<tr>
+							<td rowspan="4">로그인</td>
+							<td>로그인</td>
+							<td></td>
+							<td><a href="pages/8.로그인/로그인.html" target="_sub">로그인.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>아이디찾기</td>
+							<td></td>
+							<td><a href="pages/8.로그인/아이디찾기.html" target="_sub">아이디찾기.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>인증성공 및 불가</td>
+							<td><a href="pages/8.로그인/인증여부팝업.html" target="_sub">인증여부팝업.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+						<tr>
+							<td>비밀번호찾기</td>
+							<td></td>
+							<td><a href="pages/8.로그인/비밀번호찾기.html" target="_sub">비밀번호찾기.html</a></td>
+							<td class="last_modified">2023-12-27</td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+
+						<!-- 웹뷰 -->
+						<tr>
+							<td colspan="100" class="td-title">웹뷰 (pages/9.웹뷰)</td>
+						</tr>
+						<tr>
+							<td rowspan="9">웹뷰</td>
+							<td>메인(카드 없을 때)</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/메인.html" target="_sub">메인.html</a></td>
+							<td class="last_modified">2024-01-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>메인(카드 있을 때)</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/메인2.html" target="_sub">메인2.html</a></td>
+							<td class="last_modified">2024-01-22</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>alert공통</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/alert공통.html" target="_sub">alert공통.html</a></td>
+							<td class="last_modified">2024-01-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>카드등록</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/카드등록.html" target="_sub">카드등록.html</a></td>
+							<td class="last_modified">2024-01-19</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>카드이용내역</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/카드이용내역.html" target="_sub">카드이용내역.html</a></td>
+							<td class="last_modified">2024-01-22</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>카드이용내역상세</td>
+							<td><a href="pages/9.웹뷰/카드이용내역상세.html" target="_sub">카드이용내역상세.html</a></td>
+							<td class="last_modified">2024-01-23</td>
+							<td><span class="badge-primary">MODAL</span> 취소코드</td>
+						</tr>
+						<tr>
+							<td>약관동의</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/약관동의.html" target="_sub">약관동의.html</a></td>
+							<td class="last_modified"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>약관상세</td>
+							<td><a href="pages/9.웹뷰/약관상세.html" target="_sub">약관상세.html</a></td>
+							<td class="last_modified"></td>
+							<td><span class="badge-primary">MODAL</span></td>
+						</tr>
+						<tr>
+							<td>신규카드신청</td>
+							<td></td>
+							<td><a href="pages/9.웹뷰/신규카드신청.html" target="_sub">신규카드신청.html</a></td>
+							<td class="last_modified"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</div><!-- .container -->
+</body>
+</html>

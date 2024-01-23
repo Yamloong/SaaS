@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>아이디 찾기 | 홈</title>
+
+<!--v Packages -->
+<script src="../../static/js/jquery.min.js"></script>
+
+<link href="../../static/css/swiper-bundle.css" rel="stylesheet" />
+<script src="../../static/js/swiper-bundle.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// 상단 공지사항 롤링
+	const swiperNotice = new Swiper("header .notice", {
+		// Optional parameters
+		direction: "vertical",
+		height: 26,
+		spaceBetween: 5, //슬라이드 사이 여백
+		speed : 600,
+		loop: true,
+		autoplay: { // 자동 롤링
+			delay: 2500, // 지연시간
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+});
+</script>
+<!--^ Packages -->
+
+<link href="../../static/css/all.css" rel="stylesheet" />
+<script src="../../static/js/util.js"></script>
+
+<!--v only 아이디 찾기 화면 -->
+<script>
+	// 인증 선택에 따른 입력 폼 표시여부
+	function certified(Elmnt){
+		// console.log(Elmnt);
+		// 본인인증 : 휴대폰번호 인증 입력폼 표시
+		if(Elmnt == 'phone'){
+			$('.input-area li.phone').show();
+			$('.input-area li.boucher').hide();
+		}
+		// 본인인증 : 바우처 카드번호 인증 입력폼 표시
+		if(Elmnt == 'boucher'){
+			$('.input-area li.boucher').show();
+			$('.input-area li.phone').hide();
+		}
+	}
+</script>
+<!--^ only 아이디 찾기 화면 -->
+</head>
+
+<body class="sub-page">
+
+	<!-- 접근성 전체 공통 -->
+	<div id="skipnav">
+        <a href="#container">본문 바로가기</a>
+    </div>
+	<!-- 접근성 전체 공통 -->
+
+	<header>
+		<div class="inner">
+			<!-- PC/MO: 메인에서만 보여짐 -->
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../static/images/logo.svg" />
+				</a>
+			</h1>
+
+			<!-- MO: 서브에서만 보여짐 -->
+			<h1 class="title">
+				<a href="javascript:window.history.back();" class="btn btn-txt" title="이전페이지">
+				</a>
+				<span>아이디 찾기</span>
+			</h1>
+
+			<!-- MO: 서브에서만 사라짐 -->
+			<div class="notice">
+				<div class="title">공지사항</div>
+				<button class="swiper-button-prev" aria-label="이전글" role="button"></button>
+				<ul class="swiper-wrapper list">
+					<li class="swiper-slide">
+						<span class="new">N</span>
+						<a href="#">아동급식 지원 플랫폼이 오픈했습니다. (22.03.08)</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">테스트 (22.03.08)</a>
+					</li>
+				</ul>
+				<button class="swiper-button-next" aria-label="다음글" role="button"></button>
+			</div>
+			
+			<!-- MO 햄버거 메뉴 -->
+			<button type="button" class="btn btn_menu" aria-haspopup="true">
+				<i class="ic-menu"></i>
+			</button>
+
+			<!-- PC 로그인 전/후 -->
+			<div class="my-state">
+				<!--v 로그인 전 -->
+				<!-- <button type="button" class="btn btn-line-primary">
+					<span>회원가입</span>
+				</button> -->
+				<!--^ 로그인 전 -->
+				
+				<!--v 로그인 후 -->
+				<button type="button" class="btn btn-txt">
+					<i class="ic-arrow_bottom"></i>
+					<span>홍길동 님</span>
+				</button>
+				<ul class="mypage-list">
+					<li>
+						<a href="#">마이페이지</a>
+					</li>
+					<li>
+						<a href="#">로그아웃</a>
+					</li>
+				</ul>
+				<!--^ 로그인 후 -->
+			</div>
+			
+		</div>
+		<div id="gnb">
+			<div class="my-state-mo">
+				<div class="button-wrap">
+					<!-- 홈 버튼 -->
+					<a href="#" class="btn btn-icon">
+						<img src="../../static/images/icon/ic_home.svg" alt="메인으로">
+					</a>
+	
+					<!-- 닫기 버튼 -->
+					<button type="button" class="btn btn-icon btn_close">
+						<i class="ic-close"></i>
+					</button>
+				</div>
+
+				<!--v 로그인 전 -->
+				<!-- <div class="title">환영합니다.</div>
+				<div class="sub-title">
+					<button type="button" class="btn btn-line-black btn_login">
+						<span>로그인</span>
+					</button>
+					<strong>후 이용해주세요.</strong>
+				</div>
+				<a href="#" class="btn_join">
+					<span>회원가입</span>
+				</a> -->
+				<!--^ 로그인 전 -->
+			
+				<!--v 로그인 후 -->
+				<div class="my-info">
+					<div class="photo"></div>
+					<div class="info">
+						<span class="name">홍길동 님</span>
+					</div>
+					<div class="card-num">1234-1234-1234-1234</div>
+					<a href="#" class="btn btn-blue">
+						<span>마이페이지</span>
+						<i class="ic-arrow_right"></i>
+					</a>
+					<a href="#" class="btn_logout">
+						<span>로그아웃</span>
+					</a>
+				</div>
+				<!--^ 로그인 후 -->
+
+				<!-- 퀵메뉴 -->
+				<ul class="quick-menu">
+					<li class="m01">
+						<a href="#">분실신고</a>
+					</li>
+					<li class="m02">
+						<a href="#">1:1문의</a>
+					</li>
+					<li class="m03">
+						<a href="#">고객센터</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="menu-list">
+				<li>
+					<a href="#">가맹점</a>
+					<ul class="gnb-sub-menu">
+						<li>
+							<a href="../1.가맹점/가맹점조회.html">가맹점 조회</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">참여마당</a>
+					<ul class="gnb-sub-menu">
+						<li>
+							<a href="../3.참여마당/공지사항.html">공지사항</a>
+						</li>
+						<li>
+							<a href="../3.참여마당/자유게시판.html">자유게시판</a>
+						</li>
+						<li>
+							<a href="../3.참여마당/부정사용사례.html">부정사용 사례</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">사용 안내</a>
+					<ul class="gnb-sub-menu">
+						<li>
+							<a href="../4.사용안내/고객지원센터.html">고객지원센터</a>
+						</li>
+						<li>
+							<a href="../4.사용안내/카드분실신고.html">카드분실신고</a>
+						</li>
+						<li>
+							<a href="../4.사용안내/자주하는질문.html">자주하는 질문</a>
+						</li>
+						<li>
+							<a href="../4.사용안내/일대일문의.html">1:1문의</a>
+						</li>
+						<li>
+							<a href="../4.사용안내/부정사용신고.html">부정사용신고</a>
+						</li>
+						<li>
+							<a href="../4.사용안내/부정사용신고결과조회.html">부정사용신고 결과조회</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<div id="container">
+		<div class="inner">
+			<ul class="bread-crumb">
+				<li>
+					<a href="#">홈</a>
+				</li>
+				<li>아이디 찾기</li>
+			</ul>
+			<div class="content-header">
+				<h3 class="title">아이디 찾기</h3>
+				<div class="sub-title">아이디를 잊으셨나요?<br>아동급식 지원 플랫폼에 등록된 휴대폰번호 본인인증으로 찾을 수 있습니다.</div>
+			</div>
+			<div class="login-wrap">
+
+			<div class="section-header">
+				<div class="title">인증방법</div>
+			</div>
+			<ul class="input-area">
+				<li>
+					<div class="check-wrap">
+						<input type="radio" id="phone" name="certified" checked onclick="certified('phone');">
+						<label for="phone">휴대폰 번호</label>
+						<input type="radio" id="boucher" name="certified" onclick="certified('boucher');">
+						<label for="boucher">바우처 카드번호</label>
+					</div>
+				</li>
+				<li>
+					<label for="name">이름</label>
+					<input type="text" id="name" placeholder="대상아동의 이름을 입력">
+				</li>
+				<!--v 휴대폰번호 인증 입력 -->
+				<li class="phone">
+					<label for="phoneNum">휴대폰 번호</label>
+					<div class="input-wrap">
+						<input type="text" id="phoneNum" maxlength="11" placeholder="숫자만 입력" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+						<button type="button" class="btn btn-info">
+							<span>인증번호 전송</span>
+						</button>
+					</div>
+				</li>
+				<li class="phone">
+					<label for="auth">인증번호 입력</label>
+					<div class="input-wrap flex">
+						<input type="text" id="auth" maxlength="6" placeholder="인증번호 6자리 입력" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+						<button type="button" class="btn btn-info">
+							<span>인증번호 확인</span>
+						</button>
+						<button type="button" class="btn btn-line-black">
+							<span>시간연장</span>
+						</button>
+						<div class="unit text-red">2:59</div>
+					</div>
+				</li>
+				<!--^ 휴대폰번호 인증 입력 -->
+
+				<!--v 바우처 카드번호 인증 입력 -->
+				<li class="boucher" style="display: none;">
+					<label for="boucherNum">바우처 카드번호</label>
+					<div class="input-wrap">
+						<input type="text" id="boucherNum" maxlength="16" placeholder="카드번호 16자리 입력" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+						<button type="button" class="btn btn-info">
+							<span>카드번호 확인</span>
+						</button>
+					</div>
+				</li>
+				<!--^ 바우처 카드번호 인증 입력 -->
+			</ul>
+
+			<!-- 문구 미확정 -->
+			<ul class="page-notice">
+				<li>인증이 잘 안되시나요?</li>
+				<li>14세 미만 어린이는 행정복지센터에서 등록한 보호자의 휴대폰 인증만 가능합니다</li>
+				<li>인증번호가 안온다면 휴대폰의 스팸메시지함을 확인해주세요 </li>
+				<li>번호가 변경되거나 문제가 있을 때 관할 행정복지센터로 연락해주세요</li>
+			</ul>
+				
+			<div class="section-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line-black">
+						<span>취소</span>
+					</button>
+					<button type="button" class="btn btn-primary">
+						<span>확인</span>
+					</button>
+				</div>
+			</div>
+
+			</div>
+		</div><!-- .inner -->
+	</div><!-- .container -->
+
+	<!-- 인증성공 완료 팝업 start -->
+	<div id="certified" class="layer-pop" style="display:block;"><!-- 실제 개발 시 style제거 후 사용해주세요. -->
+		<div class="layer-wrap" style="max-width: 400px;">
+			<div class="layer-header">
+				<h4 class="layer-title">인증성공</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="팝업 닫기"></button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="section-body certified">
+					<p class="txt">회원님의 정보와 일치하는 아이디입니다.<br><br>회원님의 아이디는 <span class="text-primary">0123abcdefgh***</span> 입니다.</p>
+					<div class="guide-txt">* 비밀번호가 기억나지 않으시면 비밀번호를 초기화 해주세요</div>
+				</div><!-- .section-body -->
+			</div><!-- .layer-body -->
+
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<a href="#" class="btn btn-line-black">
+						<span>비밀번호 찾기</span>
+					</a>
+					<a href="#" class="btn btn-primary">
+						<span>로그인</span>
+					</a>
+				</div>
+			</div>
+		</div><!-- .layer-contents -->
+	</div>
+	<!-- 인증성공  팝업 end -->
+
+	<!-- 인증성공 완료 팝업 start -->
+	<div id="certifiedCancel" class="layer-pop" style="display:block;"><!-- 실제 개발 시 style제거 후 사용해주세요. -->
+		<div class="layer-wrap" style="max-width: 400px;">
+			<div class="layer-header">
+				<h4 class="layer-title">인증불가</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="팝업 닫기"></button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="section-body">
+					<p class="txt">회원님의 정보와 일치하는 아이디가 없습니다. <br>회원가입을 해주세요.</p>
+				</div><!-- .section-body -->
+			</div><!-- .layer-body -->
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<a href="#" class="btn btn-primary">
+						<span>회원가입</span>
+					</a>
+				</div>
+			</div>
+		</div><!-- .layer-contents -->
+	</div>
+	<!-- 인증성공  팝업 end -->
+
+	<!-- 모바일에서 footer 안보이게 처리 -->
+	<footer class="pc">
+		<div class="contract">
+			<ul class="list">
+				<li>
+					<a href="#">이용약관</a>
+				</li>
+				<li>
+					<a href="#">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="#">개인정보수집이용동의서</a>
+				</li>
+				<li>
+					<a href="#">개인정보 제3자 제공 동의</a>
+				</li>
+				<li>
+					<a href="#">위치기반 서비스 이용약관</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#TOP" class="btn btn_top">
+			<i class="ic-arrow_bottom"></i>
+		</a>
+		<div class="inner">
+			<img src="../../static/images/logo_f.svg" alt="경기도">
+			<address>경남도청 (우 51154) 경상남도 창원시 의창구 중앙대로 300 대표전화 055-120서부청사, (우 52732) 경상남도 진주시 월아산로 2026</address>
+			<span class="copy">&copy; BIZPLAY All Rights Reserved.</span>
+		</div>
+	</footer>
+
+</body>
+</html>

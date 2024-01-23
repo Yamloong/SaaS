@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>바우처 카드 이용내역</title>
+<link href="../../static/css/webview.css" rel="stylesheet" />
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/webview.js"></script>
+<link href="../../static/css/monthpicker.css" rel="stylesheet" />
+<script src="../../static/js/jquery.ui.monthpicker.js"></script>
+<script>
+$(document).ready(function () {
+	$("#monthpicker").monthpicker({
+		monthNames: ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)', '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)'],
+		monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+		changeYear: false,
+		yearRange: 'c-2:c+2',
+		dateFormat: 'yy년 mm월'
+	});
+});
+</script>
+</head>
+
+<body class="sub-page">
+	
+	<header>
+		<!-- 이전 버튼 -->
+		<a href="javascript:window.history.back();" class="btn btn-icon">
+			<i class="ic-prev"></i>
+		</a>
+	</header>
+
+	<div id="container">
+		<div class="sub-wrap2">
+			<!-- 카드정보 -->
+			<div class="my-info">
+				<div class="title-wrap">
+					<!-- 신청 : gray / 정상 : navy / 정지 : red -->
+					<span class="badge navy">정상</span>
+					<div class="title">농식품 바우처</div>
+				</div>
+				<div class="card-num">1234-1234-1234-1234</div>
+				<label for="monthpicker" class="monthpicker">
+					<input type="text" id="monthpicker" value="2024년 01월" readonly>
+				</label>
+				<div class="total">
+					<div class="number">36건</div>
+					<div class="price">478,900원</div>
+				</div>
+			</div>
+
+			<!-- 카드이용내역 -->
+			<div class="usage-wrap">
+				<div class="title">카드이용내역</div>
+				<ul class="usage-list">
+					<li class="no-data">
+						<i class="ic-notice01"></i>
+						<span>조회된 내역이 없습니다.</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="subject">
+								<span>가맹점명노출 영역</span>
+								<div class="date">
+									<span class="time">2023.12.10 22:26:12</span>
+									<span class="badge red-line">QR</span>
+								</div>
+							</div>
+							<div class="price">+12,300 원</div>
+						</a>
+					</li>
+
+					<!-- 취소거래 : class "cancel" 추가 -->
+					<li class="cancel">
+						<a href="#">
+							<div class="subject">
+								<span>가맹점명노출 영역 가맹점명노출 영역가맹점명노출 영역가맹점명노출 영역</span>
+								<div class="date">
+									<span class="time">2023.12.10 22:26:12</span>
+									<span class="badge navy-line">배달앱</span>
+								</div>
+							</div>
+							<div class="price">-12,300 원</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="button-wrap">
+				<button type="button" class="btn btn-line-black">
+					<span>+ 더보기</span>
+				</button>
+			</div><!-- .button-wrap -->
+
+		</div>
+	</div><!-- .container -->
+
+	<ul id="navigation">
+		<li>
+			<a href="#">마이페이지</a>
+		</li>
+		<li>
+			<a href="#">가맹점</a>
+		</li>
+		<li>
+			<a href="#">QR결제</a>
+		</li>
+		<li>
+			<a href="#">분실신고</a>
+		</li>
+		<li>
+			<a href="#">전체메뉴</a>
+		</li>
+	</ul>
+</body>
+</html>

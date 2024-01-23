@@ -299,8 +299,9 @@ header {
     background: url('../images/webview/menu_store.svg') no-repeat center 7px;
 }
 #navigation li:nth-child(3) a {
+    width: 72px;
     height: 72px;
-    margin-top: -13px;
+    margin: -13px auto 0;
     padding-top: 40px;
     color: #fff;
     font-size: 14px;

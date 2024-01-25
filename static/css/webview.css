@@ -299,8 +299,9 @@ header {
     background: url('../images/webview/menu_store.svg') no-repeat center 7px;
 }
 #navigation li:nth-child(3) a {
+    width: 72px;
     height: 72px;
-    margin-top: -13px;
+    margin: -13px auto 0;
     padding-top: 40px;
     color: #fff;
     font-size: 14px;
@@ -378,22 +379,33 @@ header {
     z-index: 400;
 }
 .card-con {
-    height: 54px;
+    position: relative;
+    height: 44px;
     padding: 0 20px;
-    margin-top: -10px;
     background-color: #F4F4F4;
     border: 1px solid #bbb;
     border-bottom: 0;
     border-radius: 12px 12px 0 0;
-    overflow: hidden;
     transition: height 0.45s;
+}
+.card-con.on::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    bottom: -9px;
+    width: 100%;
+    height: 10px;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
 }
 .card-con:last-child {
     padding-bottom: 15px;
 }
 .card-con.on {
-    height: 360px;
+    height: calc(100vh - 340px);
     padding: 0 17px;
+    background-color: #fff;
     border: 4px solid #000;
     border-bottom: 0;
 }
@@ -404,9 +416,11 @@ header {
     position: relative;
     margin-bottom: 32px;
     padding: 12px 0;
+    background-color: #f4f4f4;
 }
 .card-con.on .title-wrap {
     padding: 9px 0 12px;
+    background-color: #fff;
 }
 .card-con .title-wrap .title {
     color: #666;
@@ -470,6 +484,9 @@ header {
 .card-con .card-info dd {
     flex: 1;
     min-width: calc(100% - 84px);
+}
+.card-con .card-info dd strong {
+    margin-left: 4px;
 }
 /* 링크 아이콘 */
 .btn i.ic_link {

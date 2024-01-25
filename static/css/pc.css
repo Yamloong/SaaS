@@ -826,6 +826,7 @@ footer .inner {
 footer .inner address {
 	display: inline-block;
 	margin-left: 24px;
+	padding: 0 20px;
 	font-style: normal;
 }
 footer .inner address::after {

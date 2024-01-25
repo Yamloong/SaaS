@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>바우처 카드 이용내역상세</title>
+<link href="../../static/css/webview.css" rel="stylesheet" />
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/webview.js"></script>
+</head>
+
+<body class="sub-page">
+	
+	<header>
+		<!-- 이전 버튼 -->
+		<a href="javascript:window.history.back();" class="btn btn-icon">
+			<i class="ic-prev"></i>
+		</a>
+	</header>
+
+	<div id="container">
+		<div class="sub-wrap2">
+
+			<!-- 카드이용내역 상세 -->
+			<div class="usage-details">
+				<!-- 취소거래시 title 옆에 cancel 클래스 추가 -->
+				<div class="title">세븐일레븐 영등포구청역점 가맹점명영역 초과시 줄바꿈 줄바꿈 줄바꿈</div>
+
+				<!-- 취소거래시 date 옆에 cancel 클래스 추가 -->
+				<div class="date">
+					2023.10.30(월) 22:16:42
+					<span class="badge red-line">QR</span>
+				</div>
+				<dl class="detail-list total">
+					<dt>결제금액</dt>
+					<dd>
+						<!-- 취소거래시 price 옆에 cancel 클래스 추가 -->
+						<div class="price">500 원</div>
+
+						<!-- 취소거래시 transaction 옆에 text-info 클래스 추가 -->
+						<div class="transaction">정상승인 | 일시불</div>
+					</dd>
+				</dl>
+
+				<!-- 취소거래시 취소날짜 생성 -->
+				<!-- <dl class="detail-list">
+					<dt>취소일자</dt>
+					<dd>
+						<div class="date">2023.12.10(일) 16:16:16</div>
+					</dd>
+				</dl> -->
+
+				<hr class="dashed mt20"><!-- 점선 -->
+
+				<dl class="detail-list menu">
+					<dt>일회용봉투</dt>
+					<dd>50원</dd>
+				</dl>
+				<dl class="detail-list menu">
+					<dt>마이쮸1</dt>
+					<dd>450원</dd>
+				</dl>
+
+				<hr class="solid mt20"><!-- 실선 -->
+
+				<dl class="detail-list">
+					<dt>카드번호</dt>
+					<dd>1234-1234-1234-1234</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>승인번호</dt>
+					<dd>54259582</dd>
+				</dl>
+
+				<hr class="solid"><!-- 실선 -->
+
+				<dl class="detail-list mt20">
+					<dt>가맹점명</dt>
+					<dd>세븐일레븐 영등포구청역점 가맹점명영역 초과시 줄바꿈</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>업종</dt>
+					<dd>편의점</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>사업자등록번호</dt>
+					<dd>696-88-00546</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>대표자명</dt>
+					<dd>이도</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>전화번호</dt>
+					<dd>696-88-00546</dd>
+				</dl>
+				<dl class="detail-list">
+					<dt>주소</dt>
+					<dd>서울 영등포구 영등포동 132-23 KNK지식산업센터 101호</dd>
+				</dl>
+			</div>
+
+			<div class="button-wrap">
+				<button type="button" class="btn big btn-black" onclick="openPop('paymentCancel');">
+					<span>결제취소</span>
+				</button>
+			</div><!-- .button-wrap -->
+
+		</div>
+	</div><!-- .container -->
+
+	<!-- 결제취소 팝업 start -->
+	<div id="paymentCancel" class="layer-pop">
+		<div class="layer-wrap">
+			<div class="layer-header">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-icon btn_close">
+						<i class="ic-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="payment-cancel">
+					<div class="code">
+						<img src="../../static/images/webview/img_payment.png" alt="code">
+					</div>
+					<div class="payment">
+						<span class="timer">00:47</span>
+						<button type="button" class="btn btn-icon">
+							<i class="ic_reset"></i>
+						</button>
+					</div>
+					<p class="txt">결제 취소를 위해 직원분께 화면을 보여주세요</p>
+				</div>
+			</div><!-- .layer-body -->
+		</div><!-- .layer-contents -->
+	</div>
+	<!-- 결제취소 팝업 end -->
+
+	<ul id="navigation">
+		<li>
+			<a href="#">마이페이지</a>
+		</li>
+		<li>
+			<a href="#">가맹점</a>
+		</li>
+		<li>
+			<a href="#">QR결제</a>
+		</li>
+		<li>
+			<a href="#">분실신고</a>
+		</li>
+		<li>
+			<a href="#">전체메뉴</a>
+		</li>
+	</ul>
+</body>
+</html>

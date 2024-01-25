@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Noto Sans KR */
+@font-face{
+	font-family: "NotoSansKR";
+	font-weight: 400;
+	src:url("../font/NotoSansKR/NotoSansKR-Regular.woff2");
+}
+	
+@font-face{
+	font-family: "NotoSansKR";
+	font-weight: 500;
+	src:url("../font/NotoSansKR/NotoSansKR-Medium.woff2");
+}
+	
+@font-face{
+	font-family: "NotoSansKR";
+	font-weight: 700;
+	src:url("../font/NotoSansKR/NotoSansKR-Bold.woff2");
+}
+
+/* S-Core Deram */
+@font-face{
+	font-family: "SCDream";
+	font-weight: 200;
+	src:url("../font/SCDream/SCDream4.otf") format('opentype');
+}
+	
+@font-face{
+	font-family: "SCDream";
+	font-weight: 500;
+	src:url("../font/SCDream/SCDream5.otf") format('opentype');
+}
+	
+@font-face{
+	font-family: "SCDream";
+	font-weight: 600;
+	src:url("../font/SCDream/SCDream6.otf") format('opentype');
+}
+
+@font-face{
+	font-family: "SCDream";
+	font-weight: 700;
+	src:url("../font/SCDream/SCDream7.otf") format('opentype');
+}

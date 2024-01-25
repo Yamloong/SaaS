@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>바우처 카드등록</title>
+<link href="../../static/css/webview.css" rel="stylesheet" />
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/webview.js"></script>
+</head>
+
+<body class="sub-page">
+	
+	<header>
+		<!-- 이전 버튼 -->
+		<a href="javascript:window.history.back();" class="btn btn-icon">
+			<i class="ic-prev"></i>
+		</a>
+	</header>
+
+	<div id="container">
+		<div class="sub-wrap">
+			<div class="title-wrap">
+				<div class="title">바우처 신청</div>
+			</div><!-- .title-wrap -->
+
+			<div class="sub-title">바코드결제를 사용하기 위해서는<br>최초 1회 카드등록이 필요합니다.</div>
+
+			<div class="guide">
+				<div class="txt">등록하실 바우처카드를 선택하세요.</div>
+			</div><!-- .guide -->
+
+			<ul class="boucher">
+				<li class="selected">
+					<a href="#"><img src="../../static/images/webview/logo_mlik.svg" alt="우유 바우처"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/images/webview/logo_agrifood.svg" alt="농식품 바우처"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/images/webview/logo_children.svg" alt="아동급식지원 바우처"></a>
+				</li>
+			</ul><!-- .boucher -->
+
+			<div class="input-area">
+				<input type="number" pattern="\d*" maxlength="4" placeholder="●●●●" oninput="maxLengthCheck(this)">
+				<input type="number" pattern="\d*" maxlength="4" placeholder="●●●●" oninput="maxLengthCheck(this)">
+				<input type="number" pattern="\d*" maxlength="4" placeholder="●●●●" oninput="maxLengthCheck(this)">
+				<input type="number" pattern="\d*" maxlength="4" placeholder="●●●●" oninput="maxLengthCheck(this)">
+			</div><!-- .input-area -->
+
+			<div class="button-wrap">
+				<button type="button" class="btn big btn-black">
+					<span>확인</span>
+				</button>
+			</div><!-- .button-wrap -->
+
+			<ul class="guide">
+				<li>본인카드만 등록가능합니다.</li>
+				<li>행정복지센터를 통해 바우처카드를 재발급 받으셨다면 카드등록이 다시 필요합니다.</li>
+			</ul><!-- .guide -->
+
+		</div>
+	</div><!-- .container -->
+</body>
+</html>

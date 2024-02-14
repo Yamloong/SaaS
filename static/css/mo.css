@@ -443,7 +443,7 @@ footer .inner address::after {
 	margin-bottom: 0;
 }
 .map-control .search-result .search-list ul {
-	max-height: calc(100vh - 211px);
+	max-height: none;
 }
 .map-control .search-result .search-list li {
 	padding: 16px 0;

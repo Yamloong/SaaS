@@ -406,11 +406,16 @@ footer .inner address::after {
 	1. 가맹점
 ************************************************/
 .map-wrap {
-	margin: 0 -20px;
+	margin: 0 -20px -20px -20px;
 }
 .map-control {
 	position: static;
 	width: 100%;
+}
+
+/* 가맹점 정보 팝업 */
+.map-wrap .map-area {
+	max-height: calc(100svh - 200px);
 }
 
 /* 가맹점 검색 */

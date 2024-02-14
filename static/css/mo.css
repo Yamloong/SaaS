@@ -417,6 +417,9 @@ footer .inner address::after {
 .map-wrap .map-area {
 	max-height: calc(100svh - 200px);
 }
+.map-wrap .map-area .map img {
+	height: 100%;
+}
 
 /* 가맹점 검색 */
 .map-control .search-area {

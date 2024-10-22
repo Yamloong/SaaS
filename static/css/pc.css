@@ -1186,6 +1186,7 @@ footer .inner address::after {
 	position: absolute;
 	top: 24px;
 	left: 24px;
+	bottom: 24px;
 	z-index: 200;
 	width: 352px;
 }
@@ -1271,7 +1272,8 @@ footer .inner address::after {
 }
 
 .map-control .search-result .search-list ul {
-	max-height: 542px;
+	max-height: calc(100vh - 245px);
+	/* max-height: 542px; */
 	overflow-y: auto;
 }
 .map-control .search-result .search-list li {
@@ -1392,7 +1394,6 @@ footer .inner address::after {
 .map-wrap .store-layer .button-wrap .ic-navigation {
 	font-size: 16px;
 }
-
 
 /*** 배달앱 ***/
 .delivery-wrap {

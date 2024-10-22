@@ -406,19 +406,20 @@ footer .inner address::after {
 	1. 가맹점
 ************************************************/
 .map-wrap {
-	margin: 0 -20px -20px -20px;
+	margin: -20px -20px -28px -20px;
+	overflow: hidden;
 }
 .map-control {
-	position: static;
+	/* position: static; */
+	position: absolute;
+	left: 0;
+	top: 0;
 	width: 100%;
 }
 
-/* 가맹점 정보 팝업 */
-.map-wrap .map-area {
-	max-height: calc(100svh - 200px);
-}
-.map-wrap .map-area .map img {
-	height: 100%;
+/* 지도 */
+.map-wrap .map-area .map {
+	height: calc(100svh - 56px);
 }
 
 /* 가맹점 검색 */
@@ -437,15 +438,39 @@ footer .inner address::after {
 
 /* 가맹점 검색 결과 */
 .map-control .search-result {
-	padding: 24px 20px 0 20px;
+	position: absolute;
+	left: 0;
+	top: calc(100svh - 200px);
+	bottom: 0;
+	z-index: 100;
 	margin-top: 0;
+	padding: 0;
 	border-radius: 0;
 	box-shadow: none;
 }
 .map-control .search-result .search-tab {
 	margin-bottom: 0;
 }
+.map-control .search-result .search-list {
+	position: relative;
+	padding: 24px 20px 28px 20px;
+	background-color: #fff;
+	transition: transform 0.45s ease-out; /* 부드러운 전환 효과 */
+	scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+.map-control .search-result .search-list::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: calc(50% - 22.5px);
+	top: 10px;
+	width: 45px;
+	height: 5px;
+	background-color: #eee;
+	border-radius: 5px;
+}
 .map-control .search-result .search-list ul {
+	/* max-height: calc(100vh - 211px); */
 	max-height: none;
 }
 .map-control .search-result .search-list li {

@@ -171,7 +171,7 @@ $(document).ready(function () {
 	let currentY = 0; // 현재 스크롤 위치
 	let distanceY = 0; // 터치 이동 거리
 	const content = $('.search-list');
-	const maxScroll = content.height() - $(window).height() + 546; // 스와이프 가능한 최대 거리
+	const maxScroll = content.height() - $(window).outerHeight() + 546; // 스와이프 가능한 최대 거리
   
 	// 터치 시작 이벤트
 	content.on('touchstart', function (e) {

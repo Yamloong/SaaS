@@ -172,6 +172,7 @@ $(document).ready(function () {
 	let distanceY = 0; // 터치 이동 거리
 	const content = $('.search-list');
 	const maxScroll = content.height() - 100; // 스와이프 가능한 최대 거리
+	const scrollSpeed = 1.5; // 스크롤 속도 가속도 (1.5배 빠르게)
   
 	// 터치 시작 이벤트
 	content.on('touchstart', function (e) {
@@ -182,7 +183,7 @@ $(document).ready(function () {
 	// 터치 이동 이벤트
 	content.on('touchmove', function (e) {
 	  const moveY = e.originalEvent.touches[0].clientY; // 현재 터치 위치
-	  distanceY = moveY - startY; // 터치 이동 거리 계산
+	  distanceY = (moveY - startY) * scrollSpeed; // 터치 이동 거리와 가속도 적용
 	  let newScrollY = currentY - distanceY; // 새로운 스크롤 위치 계산
   
 	  // 스크롤 위치가 경계를 넘지 않도록 제한

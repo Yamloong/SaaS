@@ -164,4 +164,42 @@ document.addEventListener('focusout', function (event) {
 
 //--^ 툴팁을 위한 스크립트 end --------------------------------------------
 
-	
+
+//--^ 가맹점 조회 (가맹점 목록 모바일 touch) start --------------------------------------------
+$(document).ready(function () {
+	let startY = 0; // 터치 시작 지점 Y 좌표
+	let currentY = 0; // 현재 스크롤 위치
+	let distanceY = 0; // 터치 이동 거리
+	const content = $('.search-list');
+	const maxScroll = content.height() - $(window).height() + 546; // 스와이프 가능한 최대 거리
+  
+	// 터치 시작 이벤트
+	content.on('touchstart', function (e) {
+	  startY = e.originalEvent.touches[0].clientY; // 터치 시작 지점 기록
+	  distanceY = 0; // 초기화
+	});
+  
+	// 터치 이동 이벤트
+	content.on('touchmove', function (e) {
+	  const moveY = e.originalEvent.touches[0].clientY; // 현재 터치 위치
+	  distanceY = moveY - startY; // 터치 이동 거리 계산
+	  let newScrollY = currentY - distanceY; // 새로운 스크롤 위치 계산
+  
+	  // 스크롤 위치가 경계를 넘지 않도록 제한
+	  newScrollY = Math.max(0, Math.min(newScrollY, maxScroll));
+  
+	  // 콘텐츠 이동
+	  content.css('transform', `translateY(${-newScrollY}px)`);
+	});
+  
+	// 터치 끝 이벤트
+	content.on('touchend', function () {
+	  currentY -= distanceY; // 현재 위치 업데이트
+  
+	  // 스크롤 위치가 경계를 넘지 않도록 보정
+	  currentY = Math.max(0, Math.min(currentY, maxScroll));
+	});
+  });
+  
+//--^ 가맹점 조회 (가맹점 목록 모바일 touch) end --------------------------------------------
+  

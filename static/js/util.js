@@ -190,6 +190,11 @@ $(document).ready(function () {
   
 	  // 콘텐츠 이동
 	  content.css('transform', `translateY(${-newScrollY}px)`);
+		
+	  // 기본 브라우저 새로고침 막기
+	  if (newScrollY > 0) {
+		e.preventDefault(); // 기본 동작 차단 (새로고침 방지)
+	  }
 	});
   
 	// 터치 끝 이벤트
